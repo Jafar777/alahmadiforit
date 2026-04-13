@@ -1,5 +1,6 @@
 import './globals.css';
 import ClientLayout from './ClientLayout';
+import { LanguageProvider } from './context/LanguageContext';
 
 export const metadata = {
   title: 'مؤسسة الأحمدي | Alahmadi co',
@@ -22,8 +23,16 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <link 
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" 
+          rel="stylesheet"
+        />
+      </head>
       <body>
-        <ClientLayout>{children}</ClientLayout>
+        <LanguageProvider>
+          <ClientLayout>{children}</ClientLayout>
+        </LanguageProvider>
       </body>
     </html>
   );

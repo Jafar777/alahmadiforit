@@ -19,31 +19,40 @@
   }
 }
 
-/* Background image for the whole site */
+/* Global font settings – best for Arabic + English */
 body {
+  font-family: 'IBM Plex Sans Arabic', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   background-image: url('/websitebg.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-
+  background-color: #000;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Floating animation – moves 4px up and down slowly */
+/* For desktop screens: show the full image width without cropping */
+@media (min-width: 768px) {
+  body {
+    background-size: 100% auto;
+    background-position: top center;
+  }
+}
+
+/* Floating animation */
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
 }
-
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+/* RTL/LTR text alignment */
+[dir="rtl"] {
+  text-align: right;
+}
+[dir="ltr"] {
+  text-align: left;
 }

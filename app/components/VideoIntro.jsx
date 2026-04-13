@@ -1,8 +1,10 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function VideoIntro({ onComplete }) {
+  const { t } = useLanguage();
   const videoRef = useRef(null);
   const [showButton, setShowButton] = useState(true);
   const [error, setError] = useState(null);
@@ -66,13 +68,7 @@ export default function VideoIntro({ onComplete }) {
 
       {showButton && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
-          {/* Floating logo – moves 4px up and down */}
-          <img
-            src="/logo.png"
-            alt="Logo"
-            className="w-48 h-48 mb-8 animate-float drop-shadow-2xl"
-          />
-          {/* Gradient Button */}
+          <img src="/logo.png" alt="Logo" className="w-48 h-48 mb-8 animate-float drop-shadow-2xl" />
           <button
             onClick={startVideo}
             className="rounded-2xl px-8 py-4 text-2xl font-semibold text-white transition hover:scale-105 hover:cursor-pointer"
@@ -81,13 +77,9 @@ export default function VideoIntro({ onComplete }) {
               background: 'linear-gradient(90deg, #660bc2 0%, #d257a7 50%, #d257a7 100%)',
             }}
           >
-            بدء التجربة
+            {t('hero_btn')}
           </button>
-          {error && (
-            <p className="mt-4 rounded bg-white px-4 py-2 text-sm text-red-500">
-              {error}
-            </p>
-          )}
+          {error && <p className="mt-4 rounded bg-white px-4 py-2 text-sm text-red-500">{error}</p>}
         </div>
       )}
     </div>
