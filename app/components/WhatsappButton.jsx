@@ -3,7 +3,7 @@
 import { FaWhatsapp } from 'react-icons/fa6';
 
 export default function WhatsappButton() {
-  const phoneNumber = '966564567178';
+  const phoneNumber = '966546866105';
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (

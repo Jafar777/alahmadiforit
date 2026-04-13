@@ -45,7 +45,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3">
                 <FaPhoneAlt className="text-[#650bc2] w-4 h-4" />
-                <a href="tel:+966564567178" className="text-gray-600 hover:text-[#650bc2] transition">+966 56 456 7178</a>
+                <a href="tel:+966546866105" className="text-gray-600 hover:text-[#650bc2] transition">+966 546866105</a>
               </li>
               <li className="flex items-center gap-3">
                 <FaEnvelope className="text-[#650bc2] w-4 h-4" />

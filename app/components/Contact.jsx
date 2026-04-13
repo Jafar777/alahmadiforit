@@ -120,7 +120,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-800">{t('contact_phone_label')}</h4>
-                    <a href="tel:+966564567178" className="text-gray-600 hover:text-[#650bc2] transition">+966 56 456 7178</a>
+                    <a href="tel:+966546866105" className="text-gray-600 hover:text-[#650bc2] transition">+966 546866105</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
