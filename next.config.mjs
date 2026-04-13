@@ -1,6 +1,11 @@
+// next.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
-};
+  // If you're using static export, remove this
+  output: 'standalone', // recommended for Vercel
+  images: {
+    unoptimized: true, // if you use next/image with external assets
+  },
+}
 
-export default nextConfig;
+module.exports = nextConfig
