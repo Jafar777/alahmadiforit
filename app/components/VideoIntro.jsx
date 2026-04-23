@@ -68,13 +68,13 @@ export default function VideoIntro({ onComplete }) {
 
       {showButton && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-white">
-          <img src="/logo.png" alt="Logo" className="w-48 h-48 mb-8 animate-float drop-shadow-2xl" />
+          <img src="/logo.jpeg" alt="Logo" className="w-48 h-48 mb-8 animate-float drop-shadow-2xl" />
           <button
             onClick={startVideo}
             className="rounded-2xl px-8 py-4 text-2xl font-semibold text-white transition hover:scale-105 hover:cursor-pointer"
             style={{
               fontFamily: 'system-ui, "Segoe UI", Tahoma, sans-serif',
-              background: 'linear-gradient(90deg, #660bc2 0%, #d257a7 50%, #d257a7 100%)',
+              background: 'linear-gradient(90deg, #102039 0%, #253c66 50%, #415175 100%)',
             }}
           >
             {t('hero_btn')}

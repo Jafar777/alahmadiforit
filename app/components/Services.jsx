@@ -102,7 +102,7 @@ export default function Services() {
       <div className="absolute inset-0 bg-gradient-to-b from-white/50 via-transparent to-white/30 pointer-events-none" />
       <div className="relative max-w-7xl mx-auto z-10">
         <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-center mb-4"
-            style={{ background: 'linear-gradient(135deg, #650bc2, #a81ed6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            style={{ background: 'linear-gradient(135deg, #283593, #559fd8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
           {t('services_title')}
         </h2>
         <p ref={subtitleRef} className="text-xl md:text-2xl text-center text-gray-700 mb-16">
@@ -115,13 +115,13 @@ export default function Services() {
               ref={el => cardsRef.current[idx] = el}
               className="group backdrop-blur-md bg-white/80 rounded-2xl overflow-hidden shadow-xl transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:bg-white/95"
               style={{
-                border: '1px solid rgba(101, 11, 194, 0.25)',
+                border: '1px solid rgba(40, 53, 147, 0.25)',
                 backdropFilter: 'blur(8px)',
               }}
               onMouseEnter={() => handleCardMouseEnter(idx)}
               onMouseLeave={() => handleCardMouseLeave(idx)}
             >
-              <div className="relative aspect-video bg-gradient-to-br from-[#650bc2]/10 to-[#a81ed6]/10 overflow-hidden">
+              <div className="relative aspect-video bg-gradient-to-br from-[#283593]/10 to-[#559fd8]/10 overflow-hidden">
                 <video
                   ref={el => videoRefs.current[idx] = el}
                   src={service.video}
@@ -134,12 +134,12 @@ export default function Services() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2"
-                    style={{ background: 'linear-gradient(135deg, #650bc2, #a81ed6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                    style={{ background: 'linear-gradient(135deg, #283593, #559fd8)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                   {t(service.titleKey)}
                 </h3>
                 <p className="text-sm font-semibold text-[#283593] mb-3">{t(service.shortKey)}</p>
                 <p className="text-gray-700 text-sm leading-relaxed">{t(service.fullKey)}</p>
-                <div className="mt-4 h-0.5 w-12 bg-gradient-to-r from-[#650bc2] to-[#a81ed6] rounded-full group-hover:w-full transition-all duration-500" />
+                <div className="mt-4 h-0.5 w-12 bg-gradient-to-r from-[#283593] to-[#559fd8] rounded-full group-hover:w-full transition-all duration-500" />
               </div>
             </div>
           ))}

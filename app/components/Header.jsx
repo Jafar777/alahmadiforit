@@ -53,9 +53,9 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-3 flex items-center justify-between">
           <img
             ref={logoRef}
-            src="/navlogo.png"
+            src="/logo.png"
             alt="Alahmadi Co Logo"
-            className="h-10 md:h-12 w-auto drop-shadow-lg cursor-pointer"
+            className="h-17 md:h-22 w-auto drop-shadow-lg cursor-pointer"
             style={{ opacity: 0 }}
             onClick={() => scrollToSection('home')}
           />
@@ -66,16 +66,16 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-[#650bc2] font-medium capitalize transition duration-300 relative group"
+                className="text-[#2a4270] hover:text-[#2772cd] font-medium capitalize transition duration-300 relative group cursor-pointer"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#650bc2] to-[#a81ed6] transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[#2772cd] to-[#2a4270] transition-all duration-300 group-hover:w-full" />
               </button>
             ))}
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="text-gray-700 hover:text-[#650bc2] font-medium transition ml-4 px-3 py-1 rounded-full border border-gray-300 hover:border-[#650bc2]"
+              className="text-gray-700 hover:text-[#2772cd] font-medium transition ml-4 px-3 py-1 rounded-full border border-gray-300 hover:border-[#2772cd]"
             >
               {t('lang_toggle')}
             </button>
@@ -85,7 +85,7 @@ export default function Header() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={toggleLanguage}
-              className="text-gray-700 hover:text-[#650bc2] font-medium px-2 py-1 rounded-full border border-gray-300 text-sm"
+              className="text-gray-700 hover:text-[#2772cd] font-medium px-2 py-1 rounded-full border border-gray-300 text-sm"
             >
               {t('lang_toggle')}
             </button>
@@ -116,7 +116,7 @@ export default function Header() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-700 hover:text-[#650bc2] font-medium capitalize py-2 w-full text-center transition"
+                className="text-gray-700 hover:text-[#2772cd] font-medium capitalize py-2 w-full text-center transition"
               >
                 {item.label}
               </button>
